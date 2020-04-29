@@ -13,5 +13,5 @@
   <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+  <%= javascript_pack_tag "application", 'data-turbolinks-track': 'reload' %>    <!-- from app/javascript/packs/application.js -->
 </html>
