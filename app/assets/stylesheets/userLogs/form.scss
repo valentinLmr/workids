@@ -1,8 +1,11 @@
-.statusSelect{
+.SignUp{
     width: 100%;
-    display: inline-block;
-    margin: 50% auto;
 }
+
+.hidden{
+    display: none;
+}
+
 
 .statusSelect h1{
     text-align: center;
@@ -23,7 +26,7 @@
     color: white;
 }
 
-.statusSelect .active{
+.statusSelect .clicked{
     background-color: white;
     opacity:0.8;
     color:#95F1D0
