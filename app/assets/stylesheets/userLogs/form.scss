@@ -1,8 +1,30 @@
-.statusSelect{
+.userForm{
     width: 100%;
-    display: inline-block;
-    margin: 50% auto;
+    height: 100%;
 }
+
+.new_user{
+    width: 100%;
+    height: 50%;
+    padding-top: 50%;
+}
+
+.nextButton{
+    font-size: 150px;
+    text-align: center;
+    color: white;
+    height: 20%;
+}
+
+
+.SignUp{
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
 
 .statusSelect h1{
     text-align: center;
@@ -12,18 +34,14 @@
     border: 8px solid white;
     border-radius: 80px;
     cursor: pointer;
-    color:white;
+    color: white;
 }
 
 .status{
     display: none;
 }
 
-.nextButton{
-    color: white;
-}
-
-.statusSelect .active{
+.statusSelect .clicked{
     background-color: white;
     opacity:0.8;
     color:#95F1D0

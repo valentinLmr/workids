@@ -19,5 +19,7 @@ require("channels")
 
 import "../react/hello_react";
 import { selectStatus } from "./plugins/Userform/StatusSelection";
+import { clickNextButton } from "./plugins/Userform/NextButton";
 
 selectStatus();
+clickNextButton();

@@ -8,7 +8,7 @@ const addStatusToForm = (e) => {
 
 const selectStatus = () => {
     elements.statusSelect.addEventListener('click', e => {
-        e.target.classList.add("active")
+        e.target.classList.add("clicked")
         addStatusToForm(e.target)
     })
 }
