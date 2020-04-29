@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true
   validates :status, inclusion: { in: %w(worker seeker)}
-  validates :devise, presence: true, if: :workidz?
+  validates :description, presence: true, if: :workidz?
   validates :age, presence: true, if: :workidz?
   
   devise :database_authenticatable, :registerable,

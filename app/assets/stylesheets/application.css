@@ -13,4 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import './pages/_index.scss'
+ @import './pages/_index.scss';
+ @import './pages.scss';
+ @import './button.scss'
+

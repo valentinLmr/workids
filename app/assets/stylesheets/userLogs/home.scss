@@ -1,0 +1,35 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #95F1D0;
+}
+
+.divLogs{
+    width: 100%;
+    display: inline-block;
+    margin: 50% auto;
+}
+
+.homeLogs{
+    text-align: center;
+    width: 60%;
+    margin: 5vh auto;
+    padding: 38px;
+    border: 8px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+.Logs{
+    color: white;
+    font-size: 70px;
+}
+
+.homeLogs :hover {
+   background-color: white;
+   opacity: 0.6;
+   color: #95F1D0;
+}
+
+
+
