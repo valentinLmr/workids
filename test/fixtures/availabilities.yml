@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_service: one
+  date: 2020-04-29
+  start_time: 2020-04-29 09:38:24
+  end_time: 2020-04-29 09:38:24
+
+two:
+  user_service: two
+  date: 2020-04-29
+  start_time: 2020-04-29 09:38:24
+  end_time: 2020-04-29 09:38:24
