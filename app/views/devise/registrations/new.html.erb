@@ -1,0 +1,18 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+    <div class="statusSelect">
+      <h1>Seeker</h1>
+      <h1>Worker</h1>
+      <div class='status'>
+        <%= f.input :first_name,
+                    required: true,
+                    autofocus: true%>
+      </div>
+    </div>
+
+    <div class="info">
+<% end %>
+<div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
+
+<div class="countPage" style="display: none"> 1 </div>

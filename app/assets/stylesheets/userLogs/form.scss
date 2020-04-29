@@ -1,0 +1,30 @@
+.statusSelect{
+    width: 100%;
+    display: inline-block;
+    margin: 50% auto;
+}
+
+.statusSelect h1{
+    text-align: center;
+    width: 60%;
+    margin: 5vh auto;
+    padding: 38px;
+    border: 8px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+    color:white;
+}
+
+.status{
+    display: none;
+}
+
+.nextButton{
+    color: white;
+}
+
+.statusSelect .active{
+    background-color: white;
+    opacity:0.8;
+    color:#95F1D0
+}

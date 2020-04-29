@@ -17,4 +17,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 
-import "../react/hello_react"
+import "../react/hello_react";
+import { selectStatus } from "./plugins/Userform/StatusSelection";
+
+selectStatus();
