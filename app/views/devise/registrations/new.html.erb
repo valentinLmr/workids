@@ -30,15 +30,18 @@
         <%= f.input :phone_number, required: true, autofocus: true %>
       </div>
 
-      <div class"profil">
-        <h3> What is your phone number ? </h3>
-        <%= f.input :phone_number, required: true, autofocus: true %>
-        <h3> What is your phone number ? </h3>
-        <%= f.input :phone_number, required: true, autofocus: true %>
-
+      <div class="profil SignUp hidden">
+        <h3> <i class="fas fa-user-circle"></i> </h3>
+        <%= f.input :photo, as: :file %>
+        <h3> Description </h3>
+        <%= f.input :description, required: true, autofocus: true %>
       </div>
   <% end %>
   <div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
   <div class="step" style="display: none" data-step="1"></div>
+  <div class="form-actions" style='display:none'>
+    <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2' %>
   </div>
+</div>
+  
 

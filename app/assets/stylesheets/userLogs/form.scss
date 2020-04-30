@@ -7,9 +7,14 @@
         margin: 50% auto;
 }
 
+.profil{
+    margin: 20% auto;
+}
+
 .infos{
     margin:15% auto;
 }
+
 
 .new_user{
     width: 100%;
@@ -78,3 +83,26 @@
     font-size: 50px;
     color: white;
 }
+
+.profil i{
+    font-size: 200px ;
+    text-align: center;
+}
+
+.profil input{
+    font-size: 40px;
+    color: #C0B9B9;
+    height: auto;
+    background-color: white;
+
+}
+
+.profil textarea{
+    border: none;
+    width: 70%;
+    height: 32vh;
+    border-radius: 19px;
+    font-size: 30px;
+    color: #C0B9B9;
+}
+
