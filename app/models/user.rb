@@ -11,16 +11,16 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 7 }
   validates :address, presence: true
   validates :phone_number, presence: true
-  validates :status, inclusion: { in: %w(worker seeker)}
-  validates :description, presence: true, if: :workidz?
-  validates :age, presence: true, if: :workidz?
+  validates :status, inclusion: { in: %w(Worker Seeker)}
+  # validates :description, presence: true, if: :workidz?
+  # validates :age, presence: true, if: :workidz?
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
 
-  def workidz?
-      status == worker
-  end
+  # def workidz?
+  #     self.statue == "Worker"
+  # end
         
 end
