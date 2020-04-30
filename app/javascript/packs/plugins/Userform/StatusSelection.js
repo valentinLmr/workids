@@ -6,11 +6,23 @@ const addStatusToForm = (e) => {
     console.log(elements.statusForm.value)
 }
 
+const workidzQuestion = () => {
+    if(elements.workidzQuestion){
+        console.log(elements.statusForm.value)
+        elements.statusForm.value == "Worker" ? elements.workidzQuestion.classList.remove('hidden') : elements.workidzQuestion.classList.add('hidden')
+        
+    }
+}
+
 const selectStatus = () => {
-    elements.statusSelect.addEventListener('click', e => {
-        e.target.classList.add("clicked")
-        addStatusToForm(e.target)
-    })
+
+    if(elements.statusSelect){
+        elements.statusSelect.addEventListener('click', e => {
+            e.target.classList.add("clicked")
+            addStatusToForm(e.target)
+            workidzQuestion();
+        })
+    }
 }
 
 export {selectStatus}
