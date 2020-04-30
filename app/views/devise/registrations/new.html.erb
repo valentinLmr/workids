@@ -5,17 +5,40 @@
         <h1>Seeker</h1>
         <h1>Worker</h1>
         <div class='status'>
-          <%= f.input :first_name,
+          <%= f.input :status,
                       required: true,
                       autofocus: true%>
         </div>
       </div>
 
       <div class="infos SignUp hidden">
-      <h1>hello</h1>
+        <h3> What is your first name ? </h3>
+        <%= f.input :first_name, required: true, autofocus: true %>
+        <h3> What is your last name ? </h3>
+        <%= f.input :last_name, required: true, autofocus: true %>
+        <div class='workidsQuestion hidden'>
+          <h3> How old are you ? </h3>
+          <%= f.input :age, required: true, autofocus: true %>
+        </div>
+        <h3> What is your postal address? </h3>
+        <%= f.input :address, required: true, autofocus: true %>
+        <h3> What is your Email ? </h3>
+        <%= f.input :email, required: true, autofocus: true %>
+        <h3> What is your password ? </h3>
+        <%= f.input :password, required: true, autofocus: true %>
+        <h3> What is your phone number ? </h3>
+        <%= f.input :phone_number, required: true, autofocus: true %>
+      </div>
+
+      <div class"profil">
+        <h3> What is your phone number ? </h3>
+        <%= f.input :phone_number, required: true, autofocus: true %>
+        <h3> What is your phone number ? </h3>
+        <%= f.input :phone_number, required: true, autofocus: true %>
+
       </div>
   <% end %>
   <div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
-  <div class="step" style="display: none"> 1 </div>
+  <div class="step" style="display: none" data-step="1"></div>
   </div>
 
