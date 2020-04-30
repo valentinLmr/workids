@@ -4,11 +4,10 @@
       <div class="statusSelect SignUp">
         <h1>Seeker</h1>
         <h1>Worker</h1>
-        <div class='status'>
           <%= f.input :status,
                       required: true,
-                      autofocus: true%>
-        </div>
+                      autofocus: true,
+                      input_html: { class: 'status' }%>
       </div>
 
       <div class="infos SignUp hidden">
@@ -18,7 +17,7 @@
         <%= f.input :last_name, required: true, autofocus: true %>
         <div class='workidsQuestion hidden'>
           <h3> How old are you ? </h3>
-          <%= f.input :age, required: true, autofocus: true %>
+          <%= f.input :age, required: true, autofocus: true, input_html: {value: '1'} %>
         </div>
         <h3> What is your postal address? </h3>
         <%= f.input :address, required: true, autofocus: true %>
@@ -36,12 +35,10 @@
         <h3> Description </h3>
         <%= f.input :description, required: true, autofocus: true %>
       </div>
+        <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2 validationSignup' %>
   <% end %>
   <div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
   <div class="step" style="display: none" data-step="1"></div>
-  <div class="form-actions" style='display:none'>
-    <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2' %>
-  </div>
 </div>
   
 

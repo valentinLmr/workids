@@ -11,6 +11,7 @@ const hiddingDiv = (divToHide, divToDisplay) => {
 }
 
 const validation = () => {
+    console.log('je suis dans validation')
     elements.validationSignup.click()
 }
 

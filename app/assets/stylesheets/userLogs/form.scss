@@ -56,7 +56,7 @@
 .statusSelect .clicked{
     background-color: white;
     opacity:0.8;
-    color:#95F1D0
+    color:#95F1D0;
 }
 
 .new_user label{
@@ -104,5 +104,9 @@
     border-radius: 19px;
     font-size: 30px;
     color: #C0B9B9;
+}
+
+.validationSignup{
+    display:none;
 }
 
