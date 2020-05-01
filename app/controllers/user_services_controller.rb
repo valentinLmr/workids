@@ -4,6 +4,7 @@ class UserServicesController < ApplicationController
     end 
 
     def new
+      @services = Service.all
       @user_service = UserService.new
     end 
 

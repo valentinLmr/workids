@@ -7,5 +7,7 @@ infosSignUp: document.querySelector('.infos'),
 step: document.querySelector('.step'),
 workidzQuestion: document.querySelector('.workidsQuestion'),
 profil: document.querySelector('.profil'),
-validationSignup: document.querySelector('.validationSignup')
+validationSignup: document.querySelector('.validationSignup'),
+divIdsService: document.querySelector('.divIdsService'),
+nextButton: document.querySelector('.nextButton')
 }

@@ -7,6 +7,6 @@ class Service < ApplicationRecord
     "homeworkHelper" => "fas fa-chalkboard-teacher",
   }
     has_many :user, :through => :user_services
-    validates :name, presence: true, inclusion: { in: %w(babysitting, animalKeeper, gardening, homeworkHelper )}
+    validates :name, presence: true
     validates :icon, presence: true
 end

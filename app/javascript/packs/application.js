@@ -19,10 +19,10 @@ import 'bootstrap';
 //
 //= require turbolinks
 
-import { selectStatus } from "./plugins/Userform/StatusSelection";
-import { clickNextButton } from "./plugins/Userform/NextButton";
+import { selectStatus } from "./plugins/View/Userform/StatusSelection";
+import { ServicesSelected } from "./plugins/View/UserServiceForm/ServiceSelected";
 
     // Call your JS functions here
     selectStatus();
-    clickNextButton();
+    ServicesSelected();
 
