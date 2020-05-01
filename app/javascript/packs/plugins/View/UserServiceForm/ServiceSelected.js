@@ -11,6 +11,10 @@ const ServicesSelected = () => {
             IdsArray.push(e.target.dataset.id)}
         })
         elements.nextButton.addEventListener('click', e => {
+            elements.divIdsService.classList.add('hidden')
+            elements.divIdsService.insertAdjacentHTML(beforeend,'hidden')
+
+
             console.log(IdsArray.length)
         })
     } 
