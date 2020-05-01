@@ -1,1 +1,10 @@
-<h1>succed</h1>
+<% @services.each do |service|  %>
+    <div class='divIdsService'>
+        <h4 data-id="<%= service.id %>" > <%= service.name %> </h4>
+    </div>
+<% end %>
+
+<div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
+<div class="step" style="display: none" data-step="1"></div>
+
+
