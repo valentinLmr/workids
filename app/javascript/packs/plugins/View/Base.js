@@ -1,13 +1,17 @@
 
 export const elements = {
-statusSelect: document.querySelector('.statusSelect'),
-statusForm: document.querySelector('.status'),
-nextButton: document.querySelector('.nextButton'),
+divIdsService: document.querySelector('.divIdsService'),
+divFormUserService: document.querySelector('.divFormUserService'),
+inputFormUserServices: document.querySelectorAll('.inputFormUserServices'),
 infosSignUp: document.querySelector('.infos'),
-step: document.querySelector('.step'),
-workidzQuestion: document.querySelector('.workidsQuestion'),
+nextButton: document.querySelector('.nextButton'),
 profil: document.querySelector('.profil'),
 validationSignup: document.querySelector('.validationSignup'),
-divIdsService: document.querySelector('.divIdsService'),
-nextButton: document.querySelector('.nextButton')
+service_id_input: document.querySelector('.service_id_input'),
+statusSelect: document.querySelector('.statusSelect'),
+statusForm: document.querySelector('.status'),
+submitUserService: document.querySelector('.submitUserService'),
+stepRegistration: document.querySelector('.step'),
+stepUserService: document.querySelector('.stepUserService'),
+workidzQuestion: document.querySelector('.workidsQuestion'),
 }

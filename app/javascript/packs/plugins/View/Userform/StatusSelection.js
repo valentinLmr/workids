@@ -1,5 +1,5 @@
 import { elements } from '../Base' ;
-import * as nextButton from '../../Logic/Index' ;
+import * as Index from '../../Logic/Index' ;
 
 const addStatusToForm = (e) => {
     const result = e.innerText
@@ -18,13 +18,15 @@ const workidzQuestion = () => {
 const nextButtonUser = () =>{   
     elements.nextButton.addEventListener('click', e => {
         if (elements.step.dataset.step == 1) {
-            nextButton.hiddingDiv(elements.statusSelect, elements.infosSignUp)
-            nextButton.increment(elements.step)
+            Index.toggleDiv(elements.statusSelect, 'hidden')
+            Index.toggleDiv(elements.infosSignUp, 'hidden')
+            Index.increment(elements.step.dataset.step)
         }else if (elements.step.dataset.step == 2){
-            nextButton.hiddingDiv(elements.infosSignUp, elements.profil)
-            nextButton.increment(elements.step)
+            Index.toggleDiv(elements.infosSignUp, 'hidden')
+            Index.toggleDiv(elements.profil, 'hidden')
+            Index.increment(elements.step.dataset.step)
         }else if (elements.step.dataset.step == 3){
-            nextButton.validation()
+            Index.Toclick(elements.validationSignup)
         }
     
     })

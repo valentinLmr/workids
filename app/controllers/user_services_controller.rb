@@ -9,12 +9,10 @@ class UserServicesController < ApplicationController
     end 
 
     def create 
-        @user_service = UserService.new
-        if @user_service.save
-          redirect_to home_path
-        else
-          render :new
-        end
+      @user_service = UserService.new(params_userService)
+      @user = current_user
+      @user_service.user = @user = current_user
+      @user_service.save!
     end 
 
     def show
@@ -28,4 +26,12 @@ class UserServicesController < ApplicationController
 
     def delete
     end
+
+    private
+
+    def params_userService
+      params.require(:user_service).permit(:service_id, :price, :description)
+    end
+    
+
 end
