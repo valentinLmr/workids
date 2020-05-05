@@ -1,10 +1,32 @@
-<% @services.each do |service|  %>
-    <div class='divIdsService'>
-        <h4 data-id="<%= service.id %>" > <%= service.name %> </h4>
+<div class='divIdsService' >
+<h4> what do you rather work on ? </h4>
+    <div style="display: flex; flex-wrap: wrap; width: 81%; margin: 20% auto;height: 54%;">
+    <% @services.each do |service|  %>
+            <h4 data-id="<%= service.id %> data-icon="<%=service.icon%>"" style="font-size:200px; width:50%; text-align:center; height:100px; color:white">
+                <i class='<%= service.icon %>'></i>
+            </h4>
+    <% end %>
     </div>
-<% end %>
+</div>
+
+<div class='divFormUserService hidden'>
+        <h4 style='text-align:center; font-size:150px; color:white; margin: 40px'><i class="fas fa-paw"></i></h4>
+    <%= simple_form_for @user_service  do |f| %>
+            <%= f.input :service_id, input_html: { class: 'service_id_input hidden inputFormUserServices'}  %>
+            <div style='height: 60%'>
+                <h3>Descritpion</h3>
+                <%= f.input :description, input_html: { class: 'inputFormUserServices'} %>
+            </div>
+            <div>
+                <h3>Price/h</h3>
+                <%= f.input :price, input_html: { class: 'inputFormUserServices'} %>
+            </div>
+
+            <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2 submitUserService hidden' %>
+    <% end %>
+</div>
 
 <div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
-<div class="step" style="display: none" data-step="1"></div>
+<div class="stepUserService" style="display: none" data-step="0"></div>
 
 

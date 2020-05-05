@@ -1,18 +1,24 @@
-import { elements } from '../View/Base'
-import { element } from 'prop-types'
-
+import {elements} from '../View/Base'
+// import { element } from 'prop-types'
 export const increment = (e) => {
-    let stepInteger = parseInt(e.dataset.step, 10)
-    e.dataset.step = stepInteger += 1
-    }
-
-export const hiddingDiv = (divToHide, divToDisplay) => {
-    divToHide.classList.add('hidden');
-    divToDisplay.classList.remove('hidden');
+    return parseInt(e, 10) + 1
+    
+//    elements.stepUserService.dataset.step = dataSetToIntegerIncrementing
 }
 
-export const validation = () => {
+export const toggleDiv = (divToToggleDisplay, toToggle) => {
+    divToToggleDisplay.classList.toggle(toToggle);
+}
+
+export const Toclick = (e) => {
     console.log('je suis dans validation')
-    elements.validationSignup.click()
+    e.click()
 }
 
+export const InsertHtml = (e, position, text) => {
+    e.insertAdjacentHTML(position, text) 
+}
+
+export const cleanUp = e => {
+    e = ''
+}
