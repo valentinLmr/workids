@@ -21,8 +21,9 @@ import 'bootstrap';
 
 import { selectStatus } from "./plugins/View/Userform/StatusSelection";
 import { ServicesSelected } from "./plugins/View/UserServiceForm/ServiceSelected";
-
+import { SearchService } from './plugins/View/Service/Service';
     // Call your JS functions here
     selectStatus();
     ServicesSelected();
+    SearchService();
 

@@ -1,6 +1,20 @@
-<%= form_tag services_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
-<% end %>
+
+
+
+<div class='searchIdsService' style='height: 80%' >
+  <%= form_tag services_path, :method => 'get' do %>
+    <h4 style='color: white;
+    font-size: 84px;'> What are you looking for ? </h4>
+    <div style="display: flex; flex-wrap: wrap; width: 100%; margin: 10%% auto;height: 54%;">
+        <% @services.each do |service|  %>
+                <h4 class='serviceIcon'data-id="<%= service.id %>" data-name="<%=service.name%>" style="width:25%; height:100px; color:white; margin: 0; text-align: center">
+                <%= image_tag service.icon, alt: service.name, width: 150  %>
+                </h4>
+        <% end %>
+    </div>
+    <%= text_field_tag :search, params[:search], class: 'searchServiceInput hidden' %>
+
+   
+    <%= submit_tag "Search", :name => nil, class: 'searchServicesubmit' %>
+    <% end %>
+</div>

@@ -15,6 +15,6 @@ export const InsertHtml = (e, position, text) => {
     e.insertAdjacentHTML(position, text) 
 }
 
-export const cleanUp = e => {
-    e = ''
+export const completeInputForm = (e, newValue) => {
+    e.value = newValue
 }
