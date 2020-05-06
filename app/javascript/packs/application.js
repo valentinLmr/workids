@@ -18,7 +18,7 @@ import 'bootstrap';
 // ... your other scripts here ...
 //
 //= require turbolinks
-
+import "./plugins/flatpickr";
 import { selectStatus } from "./plugins/View/Userform/StatusSelection";
 import { ServicesSelected } from "./plugins/View/UserServiceForm/ServiceSelected";
 import { SearchService } from './plugins/View/Service/Service';

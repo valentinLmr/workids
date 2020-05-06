@@ -2,7 +2,7 @@
 
 
 <div class='searchIdsService' style='height: 80%' >
-  <%= form_tag services_path, :method => 'get' do %>
+  <%= simple_form_for :search, method: "get" do |f| %>
     <h4 style='color: white;
     font-size: 84px;'> What are you looking for ? </h4>
     <div style="display: flex; flex-wrap: wrap; width: 100%; margin: 10%% auto;height: 54%;">
@@ -12,7 +12,9 @@
                 </h4>
         <% end %>
     </div>
-    <%= text_field_tag :search, params[:search], class: 'searchServiceInput hidden' %>
+    <h4 style='color: white;font-size: 84px;'> When ? </h4>
+    <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :search, input_html: {class: "searchServiceInput hidden"}%>
 
    
     <%= submit_tag "Search", :name => nil, class: 'searchServicesubmit' %>
