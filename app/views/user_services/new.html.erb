@@ -1,16 +1,17 @@
 <div class='divIdsService' >
 <h4> what do you rather work on ? </h4>
     <div style="display: flex; flex-wrap: wrap; width: 81%; margin: 20% auto;height: 54%;">
-    <% @services.each do |service|  %>
-            <h4 data-id="<%= service.id %> data-icon="<%=service.icon%>"" style="font-size:200px; width:50%; text-align:center; height:100px; color:white">
-                <i class='<%= service.icon %>'></i>
-            </h4>
-    <% end %>
+        <% @services.each do |service|  %>
+                <h4 class='serviceIcon'data-id="<%= service.id %>" data-icon="<%=service.icon%>" style="font-size:200px; width:50%; text-align:center; height:100px; color:white">
+                <%= image_tag service.icon, alt: service.name, width: 200  %>
+                </h4>
+        <% end %>
     </div>
 </div>
+        
 
 <div class='divFormUserService hidden'>
-        <h4 style='text-align:center; font-size:150px; color:white; margin: 40px'><i class="fas fa-paw"></i></h4>
+            <div class='divFormUserServiceIcon'></div>
     <%= simple_form_for @user_service  do |f| %>
             <%= f.input :service_id, input_html: { class: 'service_id_input hidden inputFormUserServices'}  %>
             <div style='height: 60%'>

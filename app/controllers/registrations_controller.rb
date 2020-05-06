@@ -5,7 +5,15 @@ class RegistrationsController < Devise::RegistrationsController
         if current_user.status == 'Worker'
             new_user_service_path
         else
-            root_path	
+            user_service_path	
+        end
+    end
+
+    def after_sign_up_path_for(resource)
+        if current_user.status == 'Worker'
+            dashboard_path
+        else
+            user_service_path	
         end
     end
 end
