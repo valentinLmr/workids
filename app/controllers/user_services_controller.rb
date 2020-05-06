@@ -1,6 +1,6 @@
 class UserServicesController < ApplicationController
     def index
-       @user_services = User_service.all
+      @user_services = UserService.search(params[:search])
     end 
 
     def new
@@ -14,18 +14,6 @@ class UserServicesController < ApplicationController
       @user_service.user = @user = current_user
       @user_service.save!
     end 
-
-    def show
-    end 
-
-    def edit
-    end 
-
-    def update
-    end
-
-    def delete
-    end
 
     private
 
