@@ -1,33 +1,38 @@
-<div class='divIdsService' >
-<h4> what do you rather work on ? </h4>
-    <div style="display: flex; flex-wrap: wrap; width: 81%; margin: 20% auto;height: 54%;">
-        <% @services.each do |service|  %>
-                <h4 class='serviceIcon'data-id="<%= service.id %>" data-icon="<%=service.icon%>" style="font-size:200px; width:50%; text-align:center; height:100px; color:white">
-                <%= image_tag service.icon, alt: service.name, width: 200  %>
+<div class='top-page'>
+    <div class='divIdsService' >
+        <h3> what do you rather work on ? </h3>
+        <div class='servicesIcon'>
+            <% @services.each do |service|  %>
+                <h4 class='serviceIcon'data-id="<%= service.id %>" data-icon="<%=service.icon%>">
+                <%= image_tag service.icon, alt: service.name, width: 100  %>
                 </h4>
-        <% end %>
+            <% end %>
+        </div>
     </div>
-</div>
         
 
-<div class='divFormUserService hidden'>
-            <div class='divFormUserServiceIcon'></div>
-    <%= simple_form_for @user_service  do |f| %>
-            <%= f.input :service_id, input_html: { class: 'service_id_input hidden inputFormUserServices'}  %>
-            <div style='height: 60%'>
-                <h3>Descritpion</h3>
-                <%= f.input :description, input_html: { class: 'inputFormUserServices'} %>
-            </div>
-            <div>
-                <h3>Price/h</h3>
-                <%= f.input :price, input_html: { class: 'inputFormUserServices'} %>
-            </div>
-
-            <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2 submitUserService hidden' %>
-    <% end %>
+    <div class='divFormUserService hidden'>
+        <div class='divFormUserServiceIcon' style='text-align:center'></div>
+            <%= simple_form_for @user_service  do |f| %>
+                <%= f.input :service_id, input_html: { class: 'service_id_input hidden inputFormUserServices'}  %>
+                    <div style='height: 60%'>
+                        <h3>Descritpion</h3>
+                        <%= f.input :description, input_html: { class: 'inputFormUserServices'} %>
+                    </div>
+                    <div>
+                        <h3>Price/h</h3>
+                        <%= f.input :price, input_html: { class: 'inputFormUserServices'} %>
+                    </div>
+                <%= f.button :submit, "S'inscrire", class: 'btn btn-primary mb-2 submitUserService hidden' %>
+            <% end %>
+    </div>
 </div>
+<div class='bottom-page'>
+    <div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
+    <div class="stepUserService" style="display: none" data-step="0"></div>
+<div>
 
-<div class='nextButton'><i class="fas fa-angle-double-right"></i></div>
-<div class="stepUserService" style="display: none" data-step="0"></div>
+
+
 
 

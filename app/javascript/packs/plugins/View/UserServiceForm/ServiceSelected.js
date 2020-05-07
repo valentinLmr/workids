@@ -23,11 +23,11 @@ const displayNewFormUserService = () => {
     if (elements.stepUserService.dataset.step == 0 ){
         Index.toggleDiv(elements.divIdsService, 'hidden')
         Index.toggleDiv(elements.divFormUserService, 'hidden')
-        Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img width="200" src="/assets/${IdsArray[step].icon}">`)
+        Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
         elements.stepUserService.dataset.step = Index.increment(elements.stepUserService.dataset.step)
     }else{
-        Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img width="200" src="/assets/${IdsArray[step].icon}">`)
+        Index.InsertHtml(elements.divFormUserService, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
         Index.increment(elements.stepUserService.dataset.step)
     } 
@@ -37,6 +37,7 @@ const ServicesSelected = () => {
     if(elements.divIdsService){
         elements.divIdsService.addEventListener('click', e => {
             const element = e.target.closest('.serviceIcon');
+            console.log(element)
             addIdToArray(element.dataset.id, element.dataset.icon)
         })
     }

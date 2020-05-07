@@ -1,0 +1,51 @@
+.statusSelect{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    resize: vertical;
+    overflow: auto;
+    text-align: center;
+}
+
+.statusChoice{
+    width: 60%;
+    margin: 5% auto;
+    height: 90px;
+    position: relative;
+    border: 4px solid white;
+    border-radius: 60px;
+
+
+    h3{
+        position: absolute;
+        top: 34%;
+        width: 100%;
+        transform: translateY(-50%);
+        resize: vertical;
+        overflow: auto;
+        text-align: center;
+        color: white;
+    }
+}
+
+.statusChoice:hover{
+    background-color: white;
+
+    h3{
+        color: #95F1D0;
+    }
+}
+
+.status{
+    display: none;
+}
+
+.profil i {
+    font-size: 80px;
+}
+.user_photo{
+    text-align: center;
+    margin: 0 auto;
+    width: 61%;
+}
