@@ -1,9 +1,10 @@
+
 .user-connexion{
     display: block;
     margin: 5% auto;
     color: white;
-    height: 100px;
-    width: 600px;
+    height: 10vh;
+    width: 80%;
     background-color: #95F1D0;
     border: none;
     border-radius: 80px;
@@ -13,8 +14,8 @@
 
 .login {
     font-size: 30px;
-    color: white
-    ;
+    color: white;
+    text-decoration: none;
 }
 
 .user-connexion:hover{
@@ -28,7 +29,7 @@
 
 .nextButton{
     position: absolute;
-    top: 50%;
+    top: 33%;
     transform: translateY(-50%);
     font-size: 90px;
     text-align: center;
@@ -36,3 +37,4 @@
     height: 50%;
     width: 100%;
 }
+

@@ -27,16 +27,17 @@ form{
 
     h3{
         color: white;
+        font-size: 4vh;
     }
 }
 
 input{
     width: 60%;
-    height: 30px;
+    height: 5vh;
     border: none;
     margin: 0 auto;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 10px;
     color: #c3c9c7;
 }
 
@@ -46,7 +47,7 @@ input{
 
 textarea {
     width: 70%;
-    height: 250px;
+    height: 40vh;
     border: none;
     border-radius: 10px;
     color:#c3c9c7
