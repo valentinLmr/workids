@@ -18,5 +18,6 @@ statusForm: document.querySelector('.status'),
 submitUserService: document.querySelector('.submitUserService'),
 stepRegistration: document.querySelector('.step'),
 stepUserService: document.querySelector('.stepUserService'),
-workidzQuestion: document.querySelector('.workidsQuestion')
+workidzQuestion: document.querySelector('.workidsQuestion'),
+SelectServiceToSearch: document.querySelector('.SelectServiceToSearch')
 }

@@ -4,7 +4,6 @@ import * as Index from '../../Logic/Index' ;
 const addStatusToForm = (e) => {
     const result = e.innerText
     elements.statusForm.value = result
-    console.log(elements.statusForm.value)
 }
 
 const workidzQuestion = () => {
@@ -17,15 +16,15 @@ const workidzQuestion = () => {
 
 const nextButtonUser = () =>{   
     elements.nextButton.addEventListener('click', e => {
-        if (elements.step.dataset.step == 1) {
+        if (elements.stepRegistration.dataset.step == 1) {
             Index.toggleDiv(elements.statusSelect, 'hidden')
             Index.toggleDiv(elements.infosSignUp, 'hidden')
-            Index.increment(elements.step.dataset.step)
-        }else if (elements.step.dataset.step == 2){
+            elements.stepRegistration.dataset.step = Index.increment(elements.stepRegistration.dataset.step)
+        }else if (elements.stepRegistration.dataset.step == 2){
             Index.toggleDiv(elements.infosSignUp, 'hidden')
             Index.toggleDiv(elements.profil, 'hidden')
-            Index.increment(elements.step.dataset.step)
-        }else if (elements.step.dataset.step == 3){
+            elements.stepRegistration.dataset.step =  Index.increment(elements.stepRegistration.dataset.step)
+        }else if (elements.stepRegistration.dataset.step == 3){
             Index.Toclick(elements.validationSignup)
         }
     

@@ -1,0 +1,72 @@
+.full-screen{
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #95F1D0;
+}
+
+.top-page{
+    min-height: 70vh;
+    position: relative;
+}
+
+.bottom-page{
+    min-height: 30vh;
+    position: relative;
+
+}
+
+form{
+    width: 100%;
+    resize: vertical;
+    overflow: auto;
+    margin: 0 auto;
+    text-align: center;
+
+
+    h3{
+        color: white;
+    }
+}
+
+input{
+    width: 60%;
+    height: 30px;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 30px;
+    color: #c3c9c7;
+}
+
+.hidden{
+    display: none;
+}
+
+textarea {
+    width: 70%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+    color:#c3c9c7
+}
+
+body{
+    margin: 0
+}
+
+#homeDiv {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    resize: vertical;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+label{
+    display: none;
+}
+  
