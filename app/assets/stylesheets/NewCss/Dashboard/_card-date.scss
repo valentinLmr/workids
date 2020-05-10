@@ -1,0 +1,25 @@
+
+.cards{
+    display:flex;
+}
+
+.card-date{
+    height: 4em;
+    width: 4em;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.card-date-top{
+    height: 25%;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-date-bottom{
+    height: 70%;
+    margin-top: 3%;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
