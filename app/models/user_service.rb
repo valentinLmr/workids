@@ -5,4 +5,6 @@ class UserService < ApplicationRecord
   has_many :appointment
   validates :description, presence: true
   validates :price, presence: true
+
+
 end
