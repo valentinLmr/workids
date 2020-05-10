@@ -1,0 +1,21 @@
+<div class='navbar'>
+    <%= cl_image_tag @user.photo.key, alt: @user.first_name, class: 'avatar'  %>
+    <i class="fas fa-envelope"></i>
+</div>
+
+<div class='dashboard'>
+    <div id='DateAvailability'>
+        <h3> My availability </h3>
+            <% if @date == [] %>
+            <p> no availability</p>
+            <%end%>
+    </div>
+
+    <div id='Appointements'>
+        <h3> My availability </h3>
+    </div>
+
+    <div id='Contact'>
+        <h3> My availability </h3>
+    </div>
+</div>

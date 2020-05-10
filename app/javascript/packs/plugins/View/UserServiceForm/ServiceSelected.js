@@ -7,6 +7,7 @@ const IdsArray = []
 const addIdToArray = (id, icon) => {
     if (IdsArray.includes(id) == false){
     IdsArray.push({id:id, icon:icon})}
+    console.log(IdsArray)
 }
 
 const cleanFormUser = () => {
@@ -26,10 +27,16 @@ const displayNewFormUserService = () => {
         Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
         elements.stepUserService.dataset.step = Index.increment(elements.stepUserService.dataset.step)
+        console.log(elements.stepUserService.dataset.step)
+        console.log(step)
+        console.log(IdsArray[step])
     }else{
-        Index.InsertHtml(elements.divFormUserService, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
+        Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
-        Index.increment(elements.stepUserService.dataset.step)
+        elements.stepUserService.dataset.step =  Index.increment(elements.stepUserService.dataset.step)
+        console.log(elements.stepUserService.dataset.step)
+        console.log(step)
+        console.log(IdsArray[step])
     } 
 }
  

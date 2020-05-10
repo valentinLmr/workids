@@ -17,10 +17,6 @@ class User < ApplicationRecord
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
 
-
-  # def workidz?
-  #     self.statue == "Worker"
-  # end
-        
 end
