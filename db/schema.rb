@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_122051) do
+ActiveRecord::Schema.define(version: 2020_05_10_092421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 2020_04_30_122051) do
   end
 
   create_table "availabilities", force: :cascade do |t|
-    t.bigint "user_service_id", null: false
     t.date "date"
     t.time "start_time"
     t.time "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_service_id"], name: "index_availabilities_on_user_service_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_availabilities_on_user_id"
   end
 
   create_table "options", force: :cascade do |t|
@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 2020_04_30_122051) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "appointments", "user_services", column: "user_services_id"
   add_foreign_key "appointments", "users"
-  add_foreign_key "availabilities", "user_services"
+  add_foreign_key "availabilities", "users"
   add_foreign_key "options", "services"
   add_foreign_key "reviews", "users"
   add_foreign_key "user_services", "services"

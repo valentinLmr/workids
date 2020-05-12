@@ -1,7 +1,7 @@
 .full-screen{
     height: auto;
     min-height: 100vh;
-    position: relative;
+    position: fixed;
     width: 100%;
     background-color: #95F1D0;
 }
@@ -69,5 +69,8 @@ body{
 
 label{
     display: none;
+}
+.flatpickr-calendar{
+    margin:20px auto;
 }
   

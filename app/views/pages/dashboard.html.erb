@@ -6,10 +6,10 @@
 <div class='dashboard'>
     <div id='DateAvailability'>
         <h3> My availability </h3>
-            <% if @date == [] %>
-            <p> no availability</p>
+            <% if @user.availability == [] %>
+                <p> no availability</p>
             <%end%>
-        <% link_to availability_new_path do %>
+        <%= link_to new_availability_path do %>
             <i class="fas fa-plus-circle"></i>
         <%end%>
     </div>
