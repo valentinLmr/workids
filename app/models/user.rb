@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :user_services
   has_many :services, :through => :user_services
+  has_many :availability
   has_one_attached :photo
   validates :first_name, presence: true
   validates :last_name, presence: true

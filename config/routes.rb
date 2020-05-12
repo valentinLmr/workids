@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :user_services, only: [:new, :create, :index]
   resources :services, only: [:index]
+  resources :availabilities, only:[:new, :create]
 end
