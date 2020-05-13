@@ -9,6 +9,10 @@ flatpickr(".datepicker", {
     disableMobile: true
 });
 
+const arrayDatesCreated = JSON.parse(document.querySelector('.test').dataset.availabilities)
+const todisbale = []
+
+arrayDatesCreated.forEach(el => todisbale.push(new Date(el.date)))
 
 let availabilities = flatpickr(".availability", {
     onChange: console.log('selectedDates'),
@@ -16,12 +20,34 @@ let availabilities = flatpickr(".availability", {
     dateFormat: "d-m-Y",
     disableMobile: true,
     inline: true,
-    mode: 'multiple'
+    mode: 'multiple',
+    "disable": todisbale
 });
 
 
+
+// class Availability {
+//     constructor(){
+//         this.availabilities = []
+//     }
+
+//     addAvailability(id, date, start_time, end_time) {
+//         const availability = {
+//             id,
+//             date,
+//             start_time,
+//             end_time
+//         }
+//         this.availabilities.push(availability);
+//         return availability;
+//     }
+// }
+
+// const states = {}
+
 const insertFormDate = (dateArraySorted) => {
     document.querySelector('.test').innerHTML = ''
+    
     dateArraySorted.forEach(e => {
         const formToInsert = 
         `<div class='date'>
@@ -41,11 +67,37 @@ const insertFormDate = (dateArraySorted) => {
          document.querySelector('.test').insertAdjacentHTML('beforeend', formToInsert )
     })
 }
+
+
 let datesValidated = []
+
+
+// let datesCreated = []
+// states.dates = new Availability()
+
+// console.log(arrayDatesCreated)
+//    arrayDatesCreated.forEach(e => {
+//        const newdate = new Date(e.date);
+//        datesCreated.push(e.date)
+//        availabilities.selectedDates.push(newdate)
+//        states.dates.addAvailability(e.id, e.date, e.start_time, e.end_time)
+       
+//     })
+//     console.log(states.dates)
+
+    
 document.querySelector('.inputDate').addEventListener('change', e => {
-    
-    
+
     let date = e.target.value.split(',').map(e => e.trim()).sort();
+    console.log(date)
+
+
+    // date.forEeach(element => {
+    //     if(!datesCreated.includes(e)){
+    //         states.dates.addAvailability = new Availability(e.id, e.date, e.start_time, e.end_time)
+    //     }
+    // })
+
 
     if(datesValidated.length == 0){
         console.log('will send form')
@@ -78,6 +130,8 @@ document.querySelector('.inputDate').addEventListener('change', e => {
             console.log(datesValidated)
         })
     }
+
+   
     
 
     
