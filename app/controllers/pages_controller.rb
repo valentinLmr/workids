@@ -14,9 +14,11 @@ class PagesController < ApplicationController
     def userAvailabilities(allAvailabilities)
         datesArray = []
         allAvailabilities.each do |date|  
+            
             if date.date > Date.today 
                  datesArray << date.date
             end
+            raise
         end 
         return datesArray.sort.first(5)    
     end

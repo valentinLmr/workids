@@ -18,12 +18,20 @@ class AvailabilitiesController < ApplicationController
   def availabilities(availabilities)
     arrayAvailabilities = []
     availabilities.each do |date|
-      if date.date >= Date.today
-        date=[date.date, date.start_time, date.end_time]
+      
+      if date.date > Date.today
+
+        date = {
+          id: date.id,
+          date: date.date,
+          start_time: date.start_time,
+          end_time: date.end_time
+        }
         arrayAvailabilities.push(date)
       end
     end
-      return arrayAvailabilities.sort
+      return arrayAvailabilities
+      
       
   end
 
