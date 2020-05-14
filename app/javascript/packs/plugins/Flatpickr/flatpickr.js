@@ -9,20 +9,25 @@ flatpickr(".datepicker", {
     disableMobile: true
 });
 
-const arrayDatesCreated = JSON.parse(document.querySelector('.test').dataset.availabilities)
-const todisbale = []
 
-arrayDatesCreated.forEach(el => todisbale.push(new Date(el.date)))
+if(document.querySelector('.test')){
+    const arrayDatesCreated = JSON.parse(document.querySelector('.test').dataset.availabilities)
+    const todisbale = []
+    
+    arrayDatesCreated.forEach(el => todisbale.push(new Date(el.date)))
 
-let availabilities = flatpickr(".availability", {
-    onChange: console.log('selectedDates'),
-    minDate: "today",
-    dateFormat: "d-m-Y",
-    disableMobile: true,
-    inline: true,
-    mode: 'multiple',
-    "disable": todisbale
-});
+    let availabilities = flatpickr(".availability", {
+        onChange: console.log('selectedDates'),
+        minDate: "today",
+        dateFormat: "d-m-Y",
+        disableMobile: true,
+        inline: true,
+        mode: 'multiple',
+        "disable": todisbale
+    });
+
+
+
 
 
 
@@ -102,51 +107,38 @@ const insertFormDate = (dateArraySorted) => {
          document.querySelector('.test').insertAdjacentHTML('beforeend', formToInsert )
     })
 }
-
-
 let datesValidated = []
+    if(document.querySelector('.inputDate')) {
+        document.querySelector('.inputDate').addEventListener('change', e => {
 
-if(document.querySelector('.inputDate')) {
-document.querySelector('.inputDate').addEventListener('change', e => {
+            let date = e.target.value.split(',').map(e => e.trim()).sort();
+            console.log(date)
 
-    let date = e.target.value.split(',').map(e => e.trim()).sort();
-    console.log(date)
-
-    if(datesValidated.length == 0){
-        console.log('will send form')
-        insertFormDate(date)
-        
-    } else {
-        datesValidated.forEach(datevalidated => {
-            if(date.includes(datesValidated)){
-               let indexDateValidated = date.indexOf(datevalidated);
-               console.log(indexDateValidated)
-               console.log(datevalidated)
-               console.log(date[1])
-               date.splice(indexDateValidated, 1)
-               insertFormDate(date) 
+            if(datesValidated.length == 0){
+                console.log('will send form')
+                insertFormDate(date)              
             } else {
-                console.log('to delete')
+                datesValidated.forEach(datevalidated => {
+                    if(date.includes(datesValidated)){
+                    let indexDateValidated = date.indexOf(datevalidated);
+                    date.splice(indexDateValidated, 1)
+                    insertFormDate(date) 
+                    } else {
+                        console.log('to delete')
+                    }
+                })
             }
+
+            if(document.querySelector('.date')){
+                document.querySelector('.fa-check').addEventListener('click', e => {
+                    const divParent = e.target.closest('div')
+                    const formDate = e.target.closest('form')
+                    const inputDate = formDate.children[1].value
+
+                    divParent.classList.add('hidden')
+                    datesValidated.push(inputDate)
+                })
+            }  
         })
     }
-
-    if(document.querySelector('.date')){
-        document.querySelector('.fa-check').addEventListener('click', e => {
-            const divParent = e.target.closest('div')
-            const formDate = e.target.closest('form')
-            const inputDate = formDate.children[1].value
-
-            console.log(divParent)
-            divParent.classList.add('hidden')
-            datesValidated.push(inputDate)
-            console.log(datesValidated)
-        })
-    }
-
-   
-    
-
-    
-})
 }
