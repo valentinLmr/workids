@@ -9,10 +9,10 @@ flatpickr(".datepicker", {
     disableMobile: true
 });
 
-const arrayDatesCreated = JSON.parse(document.querySelector('.test').dataset.availabilities)
-const todisbale = []
+// const arrayDatesCreated = JSON.parse(document.querySelector('.test').dataset.availabilities)
+// const todisbale = []
 
-arrayDatesCreated.forEach(el => todisbale.push(new Date(el.date)))
+// arrayDatesCreated.forEach(el => todisbale.push(new Date(el.date)))
 
 let availabilities = flatpickr(".availability", {
     onChange: console.log('selectedDates'),
@@ -20,8 +20,8 @@ let availabilities = flatpickr(".availability", {
     dateFormat: "d-m-Y",
     disableMobile: true,
     inline: true,
-    mode: 'multiple',
-    "disable": todisbale
+    mode: 'multiple'
+    // "disable": todisbale
 });
 
 
@@ -85,7 +85,8 @@ let datesValidated = []
 //     })
 //     console.log(states.dates)
 
-    
+
+if(document.querySelector('.inputDate')) {
 document.querySelector('.inputDate').addEventListener('change', e => {
 
     let date = e.target.value.split(',').map(e => e.trim()).sort();
@@ -136,3 +137,4 @@ document.querySelector('.inputDate').addEventListener('change', e => {
 
     
 })
+}

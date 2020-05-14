@@ -3,7 +3,8 @@ import * as Index from '../../Logic/Index'
 
 const searchId = () => { 
     elements.searchIdsService.addEventListener('click', e => {
-        const element = e.target.closest('.serviceIcon');
+        console.log(e.target)
+        const element = e.target.closest('h4');
         Index.completeInputForm(elements.searchServiceInput, element.dataset.name)
         console.log(elements.searchServiceInput.value)
     })
