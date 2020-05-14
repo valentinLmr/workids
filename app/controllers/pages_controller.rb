@@ -18,7 +18,6 @@ class PagesController < ApplicationController
             if date.date > Date.today 
                  datesArray << date.date
             end
-            raise
         end 
         return datesArray.sort.first(5)    
     end

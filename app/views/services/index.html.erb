@@ -1,8 +1,8 @@
 
 
 
-<div class='searchIdsService' >
-  <%= simple_form_for :search, method: "get" do |f| %>
+<div class='searchIdsService' >@
+  <%= simple_form_for :formsearch, method: "get" do |f| %>
     <h3> What are you looking for ? </h3>
     <div class='SelectServiceToSearch'>
         <% @services.each do |service|  %>
@@ -12,10 +12,11 @@
         <% end %>
     </div>
     <h3> When ? </h3>
-    <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.input :search, input_html: {class: "searchServiceInput hidden"}%>
+    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :starts_time, :collection => @time %>
+    <%= f.input :timing, as: :numeric %>
 
-   
+    <%= f.input :search, input_html: {class: "searchServiceInput hidden"}%>
     <%= submit_tag "Search", :name => nil, class: 'searchServicesubmit' %>
     <% end %>
 </div>
