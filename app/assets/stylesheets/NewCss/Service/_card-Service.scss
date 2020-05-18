@@ -1,0 +1,59 @@
+
+.card-user_service{
+    margin: 20px auto;
+}
+
+.top-card-service{
+    background-color: white;
+    height: 120px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+
+    .infos-user{
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+
+
+        .title{
+            font-size: 10px;
+            color: #5A75BB;
+            
+            p{
+                margin:0;
+            }
+        }
+    .notation{
+        display: flex;
+        margin: auto 0;
+        color: orange;
+        font-size: 12px;
+    }
+    }
+    
+
+    .description-user{
+        height: 70%;
+        font-size: 9px;
+        color: #5A75BB;
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+}
+
+.bottom-card-service{
+    background-color: white;
+    height: 30px;
+    width: 80%;
+    margin: 3px auto;
+    border-radius: 0px 0px 10px 10px;
+    p {
+        color: #5A75BB;
+        margin: auto 3%;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+}

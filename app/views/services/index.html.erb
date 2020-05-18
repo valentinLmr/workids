@@ -24,5 +24,39 @@
     <% end %>
   </div>
 <% else %>
-  <p> todo</p>
+  <% @userServices.each do |user|  %>
+    <div class='cards-user-services'>
+      <div class='card-user_service'>
+            <div class='top-card-service'>
+              <div class='infos-user'>
+                <div style=' width: 30px;
+                              height: 30px;
+                              border-radius: 50%;
+                              background-color: blue;
+                              margin: 3px'>
+                </div>
+                  <div class='title'>
+                    <strong><p style='font-size:10px'><%=user[:user].first_name%>, <%=user[:user].age%></p></strong>
+                    <p style='font-size:9px' >Cysoing</p>
+                  </div>
+                <div class='notation'>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class='description-user'>
+                <p> <%=user[:user].description%> <%=user[:user_service].description%></p>
+              </div>
+            </div>
+            <div class='bottom-card-service' style='display: flex; justify-content: space-between'>
+              <p style='color: #5A75BB;'> <%=user[:user_service].price%> €/h </p>
+              <%= link_to "Plus d'infos", user_service_path(user[:user_service]), class: "btn orange" %>
+              <p><i class='far fa-check-circle'></i></p>
+            </div>
+      </div>
+    </div>
+  <% end%>
 <% end %>
