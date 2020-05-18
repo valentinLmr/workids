@@ -4,7 +4,8 @@ import * as Index from '../../Logic/Index'
 const searchId = () => { 
     elements.searchIdsService.addEventListener('click', e => {
         console.log(e.target)
-        const element = e.target.closest('h4');
+        const element = e.target.closest('h2');
+        e.target.classList.toggle('active')
         Index.completeInputForm(elements.searchServiceInput, element.dataset.name)
         console.log(elements.searchServiceInput.value)
     })
