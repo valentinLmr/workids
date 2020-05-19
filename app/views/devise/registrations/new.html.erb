@@ -1,13 +1,15 @@
 <div class='top-page'>
-    <div class="statusSelect">
-        <div class='statusChoice'>
-            <h3>Seeker</h3>
-        </div>
-        <div class='statusChoice'>
-            <h3>Worker</h3>
-        </div>
-    </div>
+    
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="statusSelect">
+            <div class='statusChoice'>
+                <h3>Seeker</h3>
+            </div>
+            <div class='statusChoice'>
+                <h3>Worker</h3>
+            </div>
+        </div>
         <%= f.input :status, required: true, autofocus: true, input_html: { class: 'status' }%>
         <div class="infos SignUp hidden">
             <h3> What is your first name ? </h3>

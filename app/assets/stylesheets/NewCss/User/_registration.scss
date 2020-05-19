@@ -1,7 +1,7 @@
 .statusSelect{
     position: absolute;
     top: 57%;
-    width: 100%;
+    width: 70%;
     transform: translateY(-50%);
     resize: vertical;
     overflow: auto;
@@ -37,6 +37,19 @@
 
     h3{
         color: #95F1D0;
+    }
+
+    
+}
+
+.error{
+    display:none;
+}
+
+.clicked{
+    background-color: white;
+    h3{
+    color: #95F1D0;  
     }
 }
 

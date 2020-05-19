@@ -1,9 +1,9 @@
 .full-screen{
     height: auto;
     min-height: 100vh;
-    position: fixed;
     width: 100%;
     background-color: #95F1D0;
+    overflow: hidden
 }
 
 .top-page{
@@ -18,7 +18,7 @@
 }
 
 form{
-    width: 100%;
+    width: 70%;
     resize: vertical;
     overflow: auto;
     margin: 0 auto;
@@ -46,12 +46,19 @@ input{
 }
 
 textarea {
-    width: 70%;
+    
+}
+
+.form-group{
+    margin: 0;
+}
+
+textarea.form-control {
     height: 40vh;
     border: none;
-    border-radius: 10px;
     color:#c3c9c7
 }
+
 
 body{
     margin: 0
