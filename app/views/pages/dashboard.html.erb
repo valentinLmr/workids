@@ -1,5 +1,9 @@
 <div class='navbar'>
-    <%= cl_image_tag @user.photo.key, alt: @user.first_name, class: 'avatar'  %>
+    <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, alt: @user.first_name, class:'avatar'  %>
+    <% else %>
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
+    <% end %>
     <i class="fas fa-envelope"></i>
 </div>
 
