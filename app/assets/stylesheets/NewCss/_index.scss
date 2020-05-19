@@ -29,7 +29,23 @@ form{
         color: white;
         font-size: 4vh;
     }
+    select{
+        color: white;
+        background-color: white;
+        border: none;
+        color: #c3c9c7;
+    }
 }
+
+.header a{
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+a{
+    color: white;
+}
+
 
 input{
     width: 60%;
@@ -37,7 +53,7 @@ input{
     border: none;
     margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #c3c9c7;
 }
 
