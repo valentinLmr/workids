@@ -22,21 +22,21 @@ const displayNewFormUserService = () => {
     const step = parseInt(elements.stepUserService.dataset.step, 10)
 
     if (elements.stepUserService.dataset.step == 0 ){
-        Index.toggleDiv(elements.divIdsService, 'hidden')
-        Index.toggleDiv(elements.divFormUserService, 'hidden')
-        Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
-        Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
-        elements.stepUserService.dataset.step = Index.increment(elements.stepUserService.dataset.step)
-        console.log(elements.stepUserService.dataset.step)
-        console.log(step)
-        console.log(IdsArray[step])
-    }else{
+            Index.toggleDiv(elements.divIdsService, 'hidden')
+            Index.toggleDiv(elements.divFormUserService, 'hidden')
+            Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
+            Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
+            elements.stepUserService.dataset.step = Index.increment(elements.stepUserService.dataset.step)
+    }else if (elements.stepUserService.dataset.step < IdsArray.length && document.getElementById('user_service_description').value != "" && document.getElementById('user_service_price').value != ""){    
+        Index.Toclick(elements.submitUserService)
+        cleanFormUser()
         Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
         elements.stepUserService.dataset.step =  Index.increment(elements.stepUserService.dataset.step)
-        console.log(elements.stepUserService.dataset.step)
-        console.log(step)
-        console.log(IdsArray[step])
+    }else if(document.getElementById('user_service_description').value != "" && document.getElementById('user_service_price').value != "") {
+             
+                Index.Toclick(elements.submitUserService)
+                cleanFormUser()
     } 
 }
  
@@ -48,20 +48,9 @@ const ServicesSelected = () => {
             addIdToArray(element.dataset.id, element.dataset.icon)
         })
     }
-    
-    if(elements.divFormUserService) {
-        elements.nextButton.addEventListener('click', e => {
-             if (elements.stepUserService.dataset.step < IdsArray.length && elements.stepUserService.dataset.step > 0 ){
-                Index.Toclick(elements.submitUserService)
-                cleanFormUser()
-                displayNewFormUserService();
-            } else if( elements.stepUserService.dataset.step == 0 ) {    
-                displayNewFormUserService();
-            } else {
-                Index.Toclick(elements.submitUserService)
-                cleanFormUser()
-            }   
-        }) 
-    } 
+    elements.nextButton.addEventListener('click', e => {
+        displayNewFormUserService(); 
+    })    
 }
 export { ServicesSelected }
+

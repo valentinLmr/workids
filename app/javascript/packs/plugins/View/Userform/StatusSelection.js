@@ -35,7 +35,8 @@ const selectStatus = () => {
 
     if(elements.statusSelect){
         elements.statusSelect.addEventListener('click', e => {
-            e.target.classList.add("clicked")
+            console.log(e.target.closest('div'))
+            e.target.closest('div').classList.add("clicked")
             addStatusToForm(e.target)
             workidzQuestion();
         })

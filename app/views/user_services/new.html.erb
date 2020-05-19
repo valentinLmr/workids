@@ -14,8 +14,10 @@
     <div class='divFormUserService hidden'>
         <div class='divFormUserServiceIcon' style='text-align:center'></div>
             <%= simple_form_for @user_service  do |f| %>
+                <%= f.error_notification %>
+
                 <%= f.input :service_id, input_html: { class: 'service_id_input hidden inputFormUserServices'}  %>
-                    <div style='height: 60%'>
+                    <div>
                         <h3>Descritpion</h3>
                         <%= f.input :description, input_html: { class: 'inputFormUserServices'} %>
                     </div>

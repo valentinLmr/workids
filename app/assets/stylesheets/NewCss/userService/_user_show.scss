@@ -20,4 +20,49 @@
     width: 80%;
     color: white;
     margin: 0 auto;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+}
+
+.review_userservice{
+    color: white;
+    height: 22vh;
+    width: 70%;
+    margin: 0 auto;
+
+    #carouselExampleIndicators{
+        height: 100%;
+    }
+
+    .carousel-indicators{
+        margin: 0
+    }
+
+    .carousel-inner{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .carousel-header{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 3px;
+    }
+
+    .name_user-review{
+        p{
+            font-size: 10px;
+            margin: 15% 0
+        }
+    }
+
+    .carousel-item{
+        margin-top: 8%;
+    }
+
+    .carousel-content{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
