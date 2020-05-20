@@ -88,7 +88,7 @@ const insertFormDate = (dateArraySorted) => {
         const formToInsert = 
         `<div class='date'>
            <form action="/availabilities" accept-charset="UTF-8" method="post">
-               <input type="hidden" name="authenticity_token" value="RresswU2R6wqxSwKKrONWUsMJRFIxyHrklcbPBWR98hR4on+YU9fSeB6xFjD6phZDQY+ULZFMBEvp6SDprWinw=="/>
+               <input type="hidden" name="authenticity_token" value="6ig/1cHuHNUg4dxcZ4Ww2K1Mkl7dRHjeZetjLMNum8DOVcj+76buGYgZCLS7hc3OmWOnIrILYdmmOtNzc3m75Q=="/>
                <input type="text" name="availability[date]" value=${e} class='date-input'/>
                <p>from</p>
                <select type="time" name="availability[start_time]" class='time-input'>
