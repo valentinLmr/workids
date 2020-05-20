@@ -1,10 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_many :reviews
-  has_many :user_services
+  has_many :reviews, :dependent => :destroy 
+  has_many :user_services, :dependent => :destroy 
   has_many :services, :through => :user_services
-  has_many :availability
+  has_many :availability, :dependent => :destroy 
+  has_many :appointments, :dependent => :destroy
   has_one_attached :photo
   validates :first_name, presence: true
   validates :last_name, presence: true

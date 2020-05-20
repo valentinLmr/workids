@@ -47,10 +47,10 @@ const ServicesSelected = () => {
             console.log(element)
             addIdToArray(element.dataset.id, element.dataset.icon)
         })
-    }
-    elements.nextButton.addEventListener('click', e => {
-        displayNewFormUserService(); 
-    })    
+        elements.nextButton.addEventListener('click', e => {
+            displayNewFormUserService(); 
+        })
+    }      
 }
 export { ServicesSelected }
 
