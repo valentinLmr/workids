@@ -27,17 +27,17 @@ const displayNewFormUserService = () => {
             Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
             Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
             elements.stepUserService.dataset.step = Index.increment(elements.stepUserService.dataset.step)
+            
     }else if (elements.stepUserService.dataset.step < IdsArray.length && document.getElementById('user_service_description').value != "" && document.getElementById('user_service_price').value != ""){    
         Index.Toclick(elements.submitUserService)
         cleanFormUser()
         Index.InsertHtml(elements.divFormUserServiceIcon, 'afterbegin',`<img style='text-align:center' width="100" src="/assets/${IdsArray[step].icon}">`)
         Index.completeInputForm(elements.service_id_input, IdsArray[step].id)
         elements.stepUserService.dataset.step =  Index.increment(elements.stepUserService.dataset.step)
-    }else if(document.getElementById('user_service_description').value != "" && document.getElementById('user_service_price').value != "") {
-             
-                Index.Toclick(elements.submitUserService)
-                cleanFormUser()
-    } 
+        console.log(elements.stepUserService.dataset.step)
+    }else if (elements.stepUserService.dataset.step = IdsArray.length && document.getElementById('user_service_description').value != "" && document.getElementById('user_service_price').value != ""){
+        document.querySelector('.dashboard-link').click()
+   }
 }
  
 const ServicesSelected = () => {
