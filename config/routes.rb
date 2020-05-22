@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
 
-  resources :user_services, only: [:new, :create, :index, :show]
+  resources :user_services, only: [:new, :create, :index, :show] do 
+    resources :appointments, only: [:new, :create]
+  end
+
   resources :services, only: [:index]
   resources :availabilities, only:[:new, :create]
 end

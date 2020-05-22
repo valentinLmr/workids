@@ -1,11 +1,6 @@
 
   <div class='user_service_title'>
-    <div style=' width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: blue;
-    margin: 3px'>
-    </div>
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
     <div class='title'>
         <strong><p style='font-size:14px'><%=@userService.user.first_name%>, <%=@userService.user.age%></p></strong>
         <p style='font-size:11px' >Cysoing</p>
@@ -38,12 +33,7 @@
       <% @userService.reviews.each_with_index do |review, index|%> 
         <div class="carousel-item <%= 'active' if index == 0 %>">          
           <div class='carousel-header'>
-            <div style=' width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              background-color: blue;
-              margin: auto 3px'>
-            </div>
+              <img class="dropdown-toggle"  style='width:5vh; height:5vh'id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
             <div class='name_user-review'>
               <strong><p style='font-size:12px'><%=review.user.first_name%></p></strong>
             </div>
@@ -74,12 +64,8 @@
 
 <div style='width: 10%;
 margin: 0 auto;'>
-<button style='border: none;
-height: 30px;
-width: 100px;
-border-radius: 3px;
-margin: 20px auto;
-background-color: #FF686B;'> </button>
+<%= link_to 'book', new_user_service_appointment_path(@userService) %>
+
 </div>
 
 
