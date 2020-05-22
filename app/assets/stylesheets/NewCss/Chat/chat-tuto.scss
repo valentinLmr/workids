@@ -1,0 +1,40 @@
+.room-nav-link {
+    border: 1px solid lightsteelblue;
+    background: lightseagreen;
+  
+    & + .room-nav-link {
+      border-top: 0 none;
+    }
+}
+
+.chat {
+    border: 1px solid lightseagreen;
+    background: lightseagreen;
+    height: 50vh;
+    border-radius: 5px 5px 0 0;
+    overflow-y: auto;
+  }
+  
+  .chat-input {
+    border-top: 0 none;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .chat-message-container {
+    padding: 5px;
+  
+    .avatar {
+      margin: 5px;
+    }
+  
+    .message-content {
+      padding: 5px;
+      border-radius: 5px;
+      background: lightseagreen;
+      color: white;
+    }
+  
+    & + .chat-message-container {
+      margin-top: 10px;
+    }
+  }

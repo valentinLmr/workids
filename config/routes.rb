@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :room_messages
+  resources :rooms
   devise_for :users, controllers: { registrations: "registrations" }
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -11,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :services, only: [:index]
   resources :availabilities, only:[:new, :create]
+  resources :room_messages
+  resources :rooms
 end
