@@ -4,8 +4,9 @@
         <div class="dropdown">
             <%= cl_image_tag @user.photo.key, alt: @user.first_name, class:'avatar'  %>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <span class="dropdown-item"><%= link_to 'Mon profil', edit_user_registration_path, class: "nav-link" %></span>
                 <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <div> class="dropdown-item"><%= link_to 'profil', edit_user_registration_path %> </div>
                 <a class="dropdown-item" href="#">Something else here</a>
             </div>
         </div>
@@ -14,8 +15,8 @@
         <div class="dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Profil</a>
-                <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :get, class: "dropdown-item" %>
+            <%= link_to 'Mon profil', edit_user_registration_path, class: "nav-link dropdown-item" %>
+            <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :get, class: "dropdown-item" %>
             </div>
         </div>
     <% end %>
