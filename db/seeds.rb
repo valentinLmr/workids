@@ -21,10 +21,10 @@ puts 'service destroying.....'
 Service.destroy_all
 puts 'service creation.....'
 
-Service.create!(name:'Babysitting', icon:'stroller.svg')
-Service.create!(name:'AnimalKeeper', icon:'animal.svg')
-Service.create!(name:'Gardening', icon:'mower.svg')
-Service.create!(name:'Teaching', icon:'teaching.svg')
+Service.create!(name:'Babysitting', icon:'stroller.svg', selected:'strollerSelect.svg')
+Service.create!(name:'AnimalKeeper', icon:'animal.svg', selected:'animalSelect.svg')
+Service.create!(name:'Gardening', icon:'mower.svg', selected:'gardeningSelect.svg')
+Service.create!(name:'Teaching', icon:'teaching.svg', selected:'teachingSelect.svg')
 
 puts 'service destroying.....'
 UserService.destroy_all

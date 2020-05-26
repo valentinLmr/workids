@@ -1,0 +1,35 @@
+<div id='Appointements'>
+        <h3> mes demandes de rendez-vous  </h3>
+        <div class= 'cards'>
+            <% @user.appointments.each do |appointment| %>
+                <div class='card-date'>
+                <div class='card-date-top'
+                <%if appointment.validating == true %>
+                    style='background-color:#F1B774' >
+                <%elsif appointment.validating == false && appointment.validated == true %>
+                    style='background-color:#FF686B' >
+                <%else%>
+                    style='background-color:#33CA7F' >
+                <% end %>
+                    <p>
+
+                        <%= appointment.date.strftime('%a') %> 
+                    </p>
+                </div>
+                <div class='card-date-bottom'
+                    <%if appointment.validating == true %>
+                        style='background-color:#F1B774' >
+                        <h4> <%= appointment.date.day %></h4>
+                        <p style='font-size:4px ; margin: 0'>en cours de validation ...</p>
+                    <%elsif appointment.validating == false && appointment.validated == true %>
+                        style='background-color:#FF686B' >
+                        <h4> <%= appointment.date.day %> </h4>
+                    <%else%>
+                        style='background-color:#33CA7F' >
+                        <h4> <%= appointment.date.day %> </h4>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>

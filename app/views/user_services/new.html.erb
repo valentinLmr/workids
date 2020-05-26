@@ -3,7 +3,7 @@
         <h3> what do you rather work on ? </h3>
         <div class='servicesIcon'>
             <% @services.each do |service|  %>
-                <h4 class='serviceIcon'data-id="<%= service.id %>" data-icon="<%=service.icon%>">
+                <h4 class='serviceIcon'data-id="<%= service.id %>" data-icon="<%=service.icon%>" data-select='<%=service.selected %>'>
                 <%= image_tag service.icon, alt: service.name, width: 100  %>
                 </h4>
             <% end %>
