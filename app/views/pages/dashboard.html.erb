@@ -1,87 +1,37 @@
 <div class='navbar'>
     <% if @user.photo.attached? %>
-        <%= cl_image_tag @user.photo.key, alt: @user.first_name, class:'avatar'  %>
+        
+        <div class="dropdown">
+            <%= cl_image_tag @user.photo.key, alt: @user.first_name, class:'avatar'  %>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
     <% else %>
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
+
+        <div class="dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Profil</a>
+                <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :get, class: "dropdown-item" %>
+            </div>
+        </div>
     <% end %>
     <i class="fas fa-envelope"></i>
 </div>
 
 <div class='dashboard'>
-    <div id='DateAvailability'>
-        <h3> My availability </h3>
-            <% if @user.availability == [] %>
-                <p> no availability</p>
-            <% else %>
-            <div class='cards'>
-                <%@arrayof5day.each do |date| %>
-                     <% if @availabilitiesOfTheWeek.include?(date)%>
-                         <div class='card-date'>
-                            <div class='card-date-top'  style='background-color: #33CA7F'>
-                                 <p> <%=date.strftime("%A")%> </p>
-                            </div>
-                             <div class='card-date-bottom' style='background-color: #33CA7F'>
-                                <h3> <%=date.day%></h3>
-                            </div>
-                        </div>
+    <% if @user.status == "Worker" %>
+        <%= render "availability", arrayof5day: @arrayof5day, availabilitiesOfTheWeek: @availabilitiesOfTheWeek, user: @user %>
+        <%= render "appointment_asking", user: @user %>
 
-                     <% else %>
-                        <div class='card-date'>
-                            <div class='card-date-top'  style='background-color: #FF686B'>
-                                <p> <%=date.strftime("%A")%> </p>
-                            </div>
-                            <div class='card-date-bottom' style='background-color: #FF686B'>
-                                <h3> <%=date.day%></h3>
-                            </div>
-                        </div>
-                     <%end%>
-                <% end %>
-            </div>
-            <%end%>
-        <%= link_to new_availability_path do %>
-            <i class="fas fa-plus-circle"></i>
-        <%end%>
-    </div>
+    <% else %>
+        <%= render "appointment_asking", user: @user %>
+    <% end %>
 
-    <div id='Appointements'>
-        <h3> My Appointements </h3>
-        <div class= 'cards'>
-            <div class='card-date'>
-                <div class='card-date-top'>
-                </div>
-                <div class='card-date-bottom'>
-                </div>
-            </div>
-
-            <div class='card-date'>
-                <div class='card-date-top'>
-                </div>
-                <div class='card-date-bottom'>
-                </div>
-            </div>
-
-            <div class='card-date'>
-                <div class='card-date-top'>
-                </div>
-                <div class='card-date-bottom'>
-                </div>
-            </div>
-
-            <div class='card-date'>
-                <div class='card-date-top'>
-                </div>
-                <div class='card-date-bottom'>
-                </div>
-            </div>
-
-            <div class='card-date'>
-                <div class='card-date-top'>
-                </div>
-                <div class='card-date-bottom'>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div id='Contact'>
         <h3> My availability </h3>

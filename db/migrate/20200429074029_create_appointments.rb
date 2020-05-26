@@ -5,10 +5,10 @@ class CreateAppointments < ActiveRecord::Migration[6.0]
       t.time :start_time
       t.time :end_time
       t.string :address
-      t.boolean :validating
-      t.boolean :validated
+      t.boolean :validating, default: true
+      t.boolean :validated, default: false
       t.references :user, null: false, foreign_key: true
-      t.references :user_services, null: false, foreign_key: true
+      t.references :user_service, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -5,6 +5,4 @@ class Appointment < ApplicationRecord
   validates :start_time, presence: true
   validates :end_time, presence: true
   validates :address, presence: true
-  validates :validating, presence: true
-  validates :validated, presence: true 
 end
