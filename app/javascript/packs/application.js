@@ -22,7 +22,10 @@ import "./plugins/Flatpickr/flatpickr";
 import { selectStatus } from "./plugins/View/Userform/StatusSelection";
 import { ServicesSelected } from "./plugins/View/UserServiceForm/ServiceSelected";
 import { SearchService } from './plugins/View/Service/Service';
+import {handleDate } from './plugins/_dasboarb_availability';
+
     // Call your JS functions here
+    handleDate();
     selectStatus();
     ServicesSelected();
     SearchService();

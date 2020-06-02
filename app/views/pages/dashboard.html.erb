@@ -35,6 +35,19 @@
     
 
     <div id='Contact'>
-        <h3> My availability </h3>
+        <h3> Contact</h3>
+        <div id='contact' style='width:80%; margin: 0 auto'>
+            <% if  @arrayOfContact.blank?  %>
+                <p>" <i>you're contact are from you're appointment. If nothing show up, Please check up you availability and wait till someone choose you </i>"</p>
+            <% else %>
+                <% @arrayOfContact.each do |appointment| %>
+                    <% if appointment.user.photo.attached? %>
+                        <%= cl_image_tag @user.photo.key, alt: @user.first_name, class:'avatar'  %>
+                    <% else appointment.validating && appointment.validated == true  %>                   
+                        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
+                    <% end %>
+                <% end %>
+            <% end %>
+        </div>
     </div>
 </div>

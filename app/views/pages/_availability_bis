@@ -1,0 +1,20 @@
+<% if @availabilitiesOfTheWeek.include?(date)%>
+            <div class='card-date'>
+               <div class='card-date-top'  style='background-color: #33CA7F'>
+                    <p> <%=date.strftime("%A")%> </p>
+               </div>
+                <div class='card-date-bottom' style='background-color: #33CA7F'>
+                   <h3> <%=date.day%></h3>
+               </div>
+           </div>
+
+        <% else %>
+           <div class='card-date'>
+               <div class='card-date-top'  style='background-color: #FF686B'>
+                   <p> <%=date.strftime("%A")%> </p>
+               </div>
+               <div class='card-date-bottom' style='background-color: #FF686B'>
+                   <h3> <%=date.day%></h3>
+               </div>
+           </div>
+        <%end%>
